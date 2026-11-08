@@ -1,0 +1,328 @@
+/* ---------- Global ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0b0b0f;
+  color: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ---------- Header ---------- */
+.header {
+  height: 75px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #111116;
+  border-bottom: 1px solid #292930;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header h1 {
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.header h1 span {
+  color: #ef3038;
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header nav a {
+  color: #c4c4cc;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.header nav a:hover {
+  color: #ef3038;
+}
+
+/* ---------- Main content ---------- */
+main {
+  width: 88%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 55px 0 35px;
+}
+
+.hero h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: #a1a1aa;
+  font-size: 16px;
+}
+
+/* ---------- Video player ---------- */
+.player {
+  background: #15151b;
+  border: 1px solid #292930;
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 65px;
+  scroll-margin-top: 95px;
+}
+
+.live-label {
+  color: #ff4545;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.player h2 {
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+
+.player iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  max-height: 680px;
+  border: none;
+  border-radius: 10px;
+  background: #000;
+}
+
+/* ---------- Channel section ---------- */
+.channels-section {
+  padding-bottom: 65px;
+  scroll-margin-top: 100px;
+}
+
+.channels-section > h2,
+.about h2 {
+  font-size: 27px;
+  margin-bottom: 15px;
+}
+
+.section-description {
+  color: #a1a1aa;
+  margin-bottom: 28px;
+}
+
+/* ---------- Channel cards ---------- */
+.channel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.channel-card {
+  background: #17171e;
+  border: 1px solid #303039;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+  transition: 0.25s ease;
+}
+
+.channel-card:hover {
+  transform: translateY(-4px);
+  border-color: #ef4444;
+}
+
+.channel-card.active-channel {
+  border-color: #ef4444;
+  background: #251719;
+}
+
+.channel-logo {
+  width: 65px;
+  height: 55px;
+  min-width: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 10px;
+  padding: 6px;
+  overflow: hidden;
+}
+
+.channel-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.channel-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.channel-info h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.channel-live-status {
+  color: #a1a1aa;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  background: #ef4444;
+  border-radius: 50%;
+}
+
+.watch-button {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 11px 14px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: 0.2s;
+}
+
+.watch-button:hover {
+  background: #b91c1c;
+}
+
+/* ---------- About ---------- */
+.about {
+  padding: 35px;
+  background: #15151b;
+  border: 1px solid #292930;
+  border-radius: 14px;
+  margin-bottom: 60px;
+  scroll-margin-top: 100px;
+}
+
+.about p {
+  color: #a1a1aa;
+  line-height: 1.7;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #888891;
+  background: #111116;
+  border-top: 1px solid #292930;
+  font-size: 13px;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1000px) {
+  .channel-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  main {
+    width: 92%;
+  }
+
+  .channel-card {
+    flex-wrap: wrap;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 650px) {
+  .header {
+    height: auto;
+    min-height: 70px;
+    padding: 15px 5%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .header nav {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header nav a {
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 38px 0 25px;
+  }
+
+  .player {
+    padding: 13px;
+    margin-bottom: 45px;
+  }
+
+  .player h2 {
+    font-size: 19px;
+  }
+
+  .channel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .channel-card {
+    flex-wrap: nowrap;
+    padding: 14px;
+  }
+
+  .channel-logo {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+  }
+
+  .channel-info h3 {
+    font-size: 14px;
+  }
+
+  .watch-button {
+    padding: 9px 10px;
+    font-size: 12px;
+  }
+
+  .about {
+    padding: 22px;
+  }
+}

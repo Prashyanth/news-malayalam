@@ -1,0 +1,12 @@
+:root {
+  font-family: Arial, sans-serif;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}

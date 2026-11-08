@@ -6,11 +6,11 @@ function App() {
     {
       name: "Asianet News",
       videoId: "x1bfKawndzs",
-      logo: `${import.meta.env.BASE_URL}logos/asianet.png`
+      logo: "logos/asianet.png"
     },
     {
       name: "24 News",
-      videoId: "nObUcHKZEGY",
+      videoId: "1wECsnGZcfc",
       logo: "/logos/24news.png"
     },
     {

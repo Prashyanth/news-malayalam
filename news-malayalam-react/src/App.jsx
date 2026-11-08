@@ -6,15 +6,7 @@ function App() {
     {
       name: "Asianet News",
       videoId: "x1bfKawndzs",
-      import { useState } from "react";
-import "./App.css";
-
-function App() {
-  const channels = [
-    {
-      name: "Asianet News",
-      videoId: "x1bfKawndzs",
-      logo: "/logos/asianet.png"
+      logo: `${import.meta.env.BASE_URL}logos/asianet.png`
     },
     {
       name: "24 News",

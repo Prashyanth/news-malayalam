@@ -5,7 +5,7 @@ function App() {
   const channels = [
     {
       name: "Asianet News",
-      videoId: "x1bfKawndzs",
+      videoId: "0QMlfUjUVzk",
       logo: "logos/asianet.png"
     },
     {
